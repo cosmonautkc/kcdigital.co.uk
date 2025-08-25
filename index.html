@@ -5,20 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tailwind-template</title>
   </head>
-  <body
-    class="m-0 h-screen flex justify-center items-center bg-[#1d251f] text-[#e2e2e2]"
-  >
-    <div class="text-center">
-      <h1 class="text-[5.5em] font-extralight">Coming Soon..</h1>
-      <p class="text-[1.25em] mb-6 font-extralight">
-        Bespoke web development, tailored to your vision.
-      </p>
-      <button
-        class="rounded-lg py-2 px-4 text-base font-extralight bg-[#363b35] text-[#e2e2e2] transition-colors duration-200 border-2 border-[#424d44]"
+  <body class="m-0 h-screen bg-[#1d251f] text-[#e2e2e2]">
+    <div class="relative w-full h-screen overflow-hidden">
+      <div
+        class="absolute inset-0 animate-gradient bg-gradient-to-r from-[#1d251f] via-[#2b392f] to-[#344337]"
+      ></div>
+
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div
+        class="w-full h-full flex flex-col justify-center items-center text-center relative z-10"
       >
-        Launching September 2025
-      </button>
+        <h1 class="max-md:text-[2.5em] text-[5.5em] font-extralight">
+          Coming Soon..
+        </h1>
+        <p class="max-md:text-[0.65em] text-[1.25em] mb-6 font-extralight">
+          Bespoke web development, tailored to your vision.
+        </p>
+        <button
+          class="rounded-lg py-2 px-4 max-md:text-[0.65em] text-base font-extralight bg-[#363b35] text-[#e2e2e2] transition-colors duration-200 border-2 border-[#424d44]"
+        >
+          Launching September 2025
+        </button>
+      </div>
     </div>
+
+    <style>
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animate-gradient {
+        background-size: 300% 300%;
+        animation: gradientMove 15s ease infinite;
+      }
+    </style>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
